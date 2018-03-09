@@ -1,0 +1,1 @@
+# A-quantum-inspired-genetic-algorithm-for-k-means-clustering-vs-simple-genetic-algorithm
