@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "qiga-kmeans"
+version = "0.1.0"
+description = "A quantum-inspired genetic algorithm for k-means clustering"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "qiga_kmeans", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.26.0"
+pandas = "^1.1.0"
+matplotlib = "^3.3.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^6.0.0"
+black = "^21.0"
+flake8 = "^3.9.0"
+mypy = "^1.10.0"
+pytest-cov = "^2.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=qiga_kmeans --cov-report=term-missing"
+
+[tool.mypy]
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+no_implicit_optional = true
+implicit_reexport = true
+warn_no_return = false
+
+[[tool.mypy.overrides]]
+module = [
+    "numpy.*",
+    "pandas.*",
+    "matplotlib.*",
+    "pytest.*"
+]
+ignore_missing_imports = true 
