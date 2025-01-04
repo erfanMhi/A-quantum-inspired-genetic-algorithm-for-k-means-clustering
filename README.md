@@ -111,6 +111,20 @@ If you use this implementation in your research, please cite:
 }
 ```
 
+## 📄 Implementation Status
+
+**Note:** The current implementation exists in two forms:
+1. Original implementation in `implementation.ipynb` - This is the working reference implementation
+2. Package implementation in `src/` directory - This is a work in progress conversion from the notebook and needs proper testing
+
+The code in the `src/` directory is currently being refactored from the notebook format and requires:
+- Complete test coverage
+- Validation against original results
+- Performance optimization
+- Documentation improvements
+
+Please refer to `implementation.ipynb` for the current working implementation.
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
